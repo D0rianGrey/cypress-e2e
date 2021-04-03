@@ -1,0 +1,14 @@
+regular -> npm run cy:open
+headless -> npm run cy:run
+
+npx cypress run --spec="cypress/integration/examples/scroll.spec.js"
+
+
+cy.visit() -  открыть сайт 
+cy.get()   -  получить элемент по локатору
+cy.wait()  -  подождать (implicitly)
+cy.pause() -  поставить выполнение на паузу
+
+
+cy.get(".product_pod").its('length').should('eq', 11);
+
