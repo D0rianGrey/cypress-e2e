@@ -10,9 +10,12 @@ describe("Navbar test", () => {
 
     it("should display feedback content", () => {
         cy.get('#feedback > div > strong').click();
-        
+        cy.url().should('include', 'feedback.html');
+
     });
 
     it("should display homepage content", () => {
+        cy.get('.brand').click();
+        cy.url().should('include', 'index.html');
     });
 });
